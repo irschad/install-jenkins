@@ -29,7 +29,7 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
 ### Step 2: Install Docker on the Ubuntu Server
 1. SSH into the EC2 instance:
    ```bash
-   ssh -i ~/.ssh/id_rsa ubuntu@18.207.123.241
+   ssh -i server-key.pem ubuntu@18.207.123.241
    ```
 2. Update the package list:
    ```bash
