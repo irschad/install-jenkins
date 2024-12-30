@@ -33,11 +33,11 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
    ```
 2. Update the package list:
    ```bash
-   sudo apt update
+   apt update
    ```
 3. Install Docker:
    ```bash
-   sudo apt install -y docker.io
+   apt install -y docker.io
    ```
 4. Start and enable the Docker service:
    ```bash
@@ -53,11 +53,11 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
 ### Step 3: Start Jenkins in a Docker Container
 1. Pull the Jenkins Docker image:
    ```bash
-   sudo docker pull jenkins/jenkins:lts
+   docker pull jenkins/jenkins:lts
    ```
 2. Run the Jenkins container:
    ```bash
-   sudo docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
+   docker run -p 8080:8080 -p 50000:50000 -d -v jenkins_home:/var/jenkins_home jenkins/jenkins:lts
    ```
    - Port 8080: Used for the Jenkins web interface.
    - Port 50000: Used for Jenkins master and worker node communication.
@@ -65,9 +65,6 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
 3. Verify the Jenkins container is running:
    ```bash
    docker ps
-   
-CONTAINER ID   IMAGE                 COMMAND                  CREATED        STATUS         PORTS                                                                                      NAMES
-b3c21b7af7c8   jenkins/jenkins:lts   "/usr/bin/tini -- /u…"   2 months ago   Up 6 seconds   0.0.0.0:8080->8080/tcp, :::8080->8080/tcp, 0.0.0.0:50000->50000/tcp, :::50000->50000/tcp   admiring_bassi
    ```
 
 ### Step 4: Initialize Jenkins
