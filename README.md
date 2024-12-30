@@ -79,7 +79,9 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
 3. Enter the initial administrator password.
 4. Install the suggested plugins.
 5. Create your first admin user.
-6. If you encounter permission issues with the Docker socket, perform the following steps:
+6. Complete the setup and access the Jenkins dashboard.
+
+Note: If you encounter permission issues with the Docker socket, perform the following steps:
    ```bash
    docker exec -it -u 0 <container-id> bash
    ```
@@ -87,7 +89,6 @@ This project demonstrates how to install and set up Jenkins on an AWS Ubuntu ser
    ```bash
    chmod 666 /var/run/docker.sock
    ```
-7. Complete the setup and access the Jenkins dashboard.
 ---
 
 ## Notes
